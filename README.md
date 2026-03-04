@@ -12,7 +12,7 @@ This pipeline estimates the heritability of paediatric mental health phenotypes 
 2. **GCTA-GREML** — estimates SNP-based heritability (h²_SNP) in unrelated individuals using genome-wide genetic relatedness matrices, applied to latent growth curve (LGC) intercepts representing each individual's stable symptom level across development
 3. **LDSC** — estimates heritability from GWAS summary statistics (derived from LGC intercept phenotypes) using linkage disequilibrium score regression, and computes genetic correlations across phenotypes and with published adult GWAS
 
-Analyses focus on **continuous mental health phenotypes** (e.g. CBCL subscales). Twin ACE models are run cross-sectionally at each assessment wave to track how heritability changes across development. GCTA-GREML and LDSC are applied to LGC intercepts extracted from the full longitudinal data in unrelated individuals, capturing the heritability of the stable component of each phenotype.
+Analyses focus on **continuous mental health phenotypes** (e.g. CBCL subscales). Twin ACE models are run cross-sectionally at each assessment wave to track how heritability changes across development. GCTA-GREML and LDSC are applied to LGC intercepts extracted from the full longitudinal data in unrelated individuals, capturing the heritability of the stable component of each phenotype — following the approach of [Deng et al. (2024), *Molecular Psychiatry*](https://www.nature.com/articles/s41380-024-02704-4). The Bayesian HLM twin ACE implementation follows [Chen et al. (2025), *Frontiers in Genetics*](https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2025.1522729/full).
 
 ---
 
@@ -26,7 +26,7 @@ longitudinal_heritability/
 │   ├── gcta_greml/
 │   │   └── mental_health/          # GCTA-GREML heritability estimation
 │   ├── latent_growth_curve/
-│   │   └── mental_health/          # LGC models; extracts intercept/slope phenotypes for GWAS
+│   │   └── mental_health/          # LGC models; extracts intercept/slope phenotypes
 │   ├── ldsc/
 │   │   └── abcd_gwas_ldsc/
 │   │       └── mental_health/      # LDSC h² and genetic correlation analyses
@@ -102,6 +102,12 @@ Each script contains a configuration section at the top where file paths and par
 If you use this pipeline, please cite:
 
 > Kępińska AP et al. (in preparation). Longitudinal heritability of paediatric psychiatric phenotypes in the ABCD Study.
+
+Please also cite the key methodological papers this pipeline is based on:
+
+> Deng WQ et al. (2024). Longitudinal characterization of impulsivity phenotypes boosts signal for genomic correlates and heritability. *Molecular Psychiatry*. https://doi.org/10.1038/s41380-024-02704-4
+
+> Chen G et al. (2025). Heritability estimation through hierarchical linear modeling. *Frontiers in Genetics*. https://doi.org/10.3389/fgene.2025.1522729
 
 Please also cite the ABCD Study, GCTA, PLINK2, and LDSC as appropriate.
 
