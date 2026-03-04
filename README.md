@@ -115,4 +115,4 @@ Please also cite the ABCD Study, GCTA, PLINK2, and LDSC as appropriate.
 
 ## Contact
 
-Adrianna Kępińska — [@apkepinska](https://github.com/apkepinska)
+Adrianna Kępińska — [@apkepinska](https://github.com/apkepinska) or adrianna.kepinska at mssm.edu
